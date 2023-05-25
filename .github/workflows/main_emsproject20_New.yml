@@ -9,7 +9,7 @@ on:
       - main
   workflow_dispatch:
 
-    jobs:
+jobs:
       build:
         runs-on: ubuntu-latest
         steps:
@@ -23,6 +23,6 @@ on:
             run: dotnet restore EMSProjectTest/EMSProjectTest.csproj
          
           - name: Build
-            run: dotnet build EMSProjectTest/EMSProjectTest.csproj
+            run: dotnet build EMSProjectTest/EMSProjectTest.csproj --configuration Release --no-restore
 
        
