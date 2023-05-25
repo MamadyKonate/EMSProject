@@ -21,7 +21,16 @@ jobs:
         with:
           dotnet-version: '7.x'
           include-prerelease: true
-
+        
+        # back one level up
+      - name: Change working directory
+        run: cd ..
+       # working-directory: ./EMSProject
+       
+      - name: Run a command in the updated working directory
+        run: |
+          echo "Working directory: $(pwd)"
+          
       - name: Build with dotnet
         run: dotnet build ./EMSProject.sln --configuration Release
 
