@@ -33,12 +33,13 @@ jobs:
           
       - name: Build with dotnet
         run: dotnet build --configuration Release
-   # /home/runner/work/EMSProject/EMSProjectTest/EMSProjectTest.csproj"    
+   
+   # /home/runner/work/EMSProject/EMSProjectTest/EMSProjectTest.csproj
        # back one more level up
       - name: Change working directory
         run: | 
          cd ..
-         cd ..
+         working-directory: cd ..
         # working-directory: ./EMSProjectTest
          
       - name: Test with dotnet
