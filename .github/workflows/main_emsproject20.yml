@@ -39,7 +39,7 @@ jobs:
         run: | 
          cd ..
          cd ..
-         working-directory: ./EMSProjectTest
+        # working-directory: ./EMSProjectTest
          
       - name: Test with dotnet
         run: dotnet test 
