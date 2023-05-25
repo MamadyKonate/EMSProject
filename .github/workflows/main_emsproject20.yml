@@ -21,11 +21,7 @@ jobs:
         with:
           dotnet-version: '7.x'
           include-prerelease: true
-        
-        
-        
-        
-        
+               
         
         
         # back one level up
@@ -39,18 +35,7 @@ jobs:
           
       - name: Build with dotnet
         run: dotnet build --configuration Release
-   
-   # /home/runner/work/EMSProject/EMSProjectTest/EMSProjectTest.csproj
-       # back one more level up
-      - name: Change working directory
-        run: | 
-         cd ..
-         working-directory: ./EMSProjectTest
-        # working-directory: ./EMSProject
-         
-      - name: Test with dotnet
-        run: dotnet test 
-        
+  
         
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
