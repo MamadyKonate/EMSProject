@@ -22,6 +22,26 @@ jobs:
           dotnet-version: '7.x'
           include-prerelease: true
         
+        
+      - name: Build EMSProject
+        run: |
+          cd EMSProject
+          dotnet build
+
+      - name: Change directory
+        run: cd ..
+
+      - name: Change to emsprojecttest directory
+        run: cd emsprojecttest
+
+      - name: Run tests
+        run: dotnet test
+        
+        
+        
+        
+        
+        
         # back one level up
       - name: Change working directory
         run: cd ..
