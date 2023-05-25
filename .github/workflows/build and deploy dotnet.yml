@@ -20,7 +20,7 @@ jobs:
               dotnet-version: '7.0.x'
           
           - name: Install dependencies
-            run: dotnet restore ./EMSProjectTest.csproj
+            run: dotnet restore ./EMSProject.csproj
          
           - name: Build
-            run: dotnet build ./EMSProjectTest.csproj --configuration Release --no-restore
+            run: dotnet build ./EMSProject.csproj --configuration Release --no-restore
