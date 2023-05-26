@@ -21,14 +21,14 @@ jobs:
               dotnet-version: '7.0.x'
           
           - name: Install dependencies
-            run: dotnet restore EMSProjectTest/EMSProjectTest.csproj
+            run: dotnet restore ./EMSProject.csproj
          
           - name: Build
-            run: dotnet build EMSProjectTest/EMSProjectTest.csproj --configuration Release --no-restore
+            run: dotnet build ./EMSProject.csproj --configuration Release --no-restore
         
             #publishing the project
           - name: publish
-            run: dotnet publish EMSProjectTest/EMSProjectTest.csproj --configuration Release --no-build --no-restore --output ./publish
+            run: dotnet publish ./EMSProject.csproj --configuration Release --no-build --no-restore --output ./publish
            
             #deploying the project
           - name: Deploy to Azure Web App
